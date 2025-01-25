@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.game-board {
+  display: grid; 
+  grid-template-columns: repeat(3, 100px); 
+  grid-template-rows: repeat(3, 100px); 
+  gap: 5px; 
+  margin-right: 20px;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: 1px solid black;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.square.winning-square {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+}
+
+.square:hover {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+.status {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.game-info {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+button {
+  background-color: #61dafb;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #21a1f1;
+}
+
+@media (max-width: 600px) {
+  .square {
+    width: 80px;
+    height: 80px;
+    font-size: 20px;
+  }
+  .status {
+    font-size: 16px;
+  }
+  .game-board {
+    gap: 3px;
+    margin-right: 0;
+  }
+}
